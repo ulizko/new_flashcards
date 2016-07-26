@@ -1,15 +1,15 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.2
+  - 2.3
 env:
   - DB=postgresql
 services:
   - postgresql
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
-  - bundle exec rake
+  - RAILS_ENV=test bundle exec rails db:migrate --trace
+  - bundle exec rails db:test:prepare
+  - bundle exec rails
 before_script:
   - cp config/database.travis.yml config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
