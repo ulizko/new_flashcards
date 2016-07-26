@@ -31,6 +31,7 @@ gem 'rollbar'
 gem 'newrelic_rpm'
 gem 'pry-rails', group: :development
 gem 'rubocop', group: :development
+gem "puma" 
 
 group :development, :test do
   gem 'byebug'

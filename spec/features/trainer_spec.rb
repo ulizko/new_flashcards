@@ -72,8 +72,8 @@ describe 'review cards with one block' do
   describe 'training with one card' do
     before(:each) do
       user = create(:user_with_one_block_and_one_card)
-      user.cards.each do |card| 
-        card.update_attribute(:review_date, Time.now - 3.days) 
+      user.cards.each do |card|
+        card.update_attribute(:review_date, Time.now - 3.days)
       end
       visit trainer_path
       login('test@test.com', '12345', 'Войти')
