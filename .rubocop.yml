@@ -53,3 +53,5 @@ Style/AlignHash:
   - ignore_explicit
 DotPosition:
   EnforcedStyle: trailing
+Style/FrozenStringLiteralComment:
+  Enabled: false
