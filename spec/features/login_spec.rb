@@ -92,10 +92,10 @@ describe 'password authentication' do
     end
 
     it 'default locale' do
-      click_link 'en'
-      register('test@test.com', '12345', '12345', 'Sing up')
+      click_link 'ru'
+      register('test@test.com', '12345', '12345', 'Зарегистрироваться')
       user = User.find_by_email('test@test.com')
-      expect(user.locale).to eq('en')
+      expect(user.locale).to eq('ru')
     end
 
     it 'available locale' do
