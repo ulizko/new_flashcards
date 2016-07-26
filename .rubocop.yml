@@ -1,0 +1,51 @@
+AllCops:
+  Include:
+  - "**/*.rake"
+  - "**/Gemfile"
+  - "**/Rakefile"
+  Exclude:
+  - "vendor/**/*"
+  - "db/**/*"
+  - "config/initializers/*"
+Documentation:
+  Enabled: false
+Style/StringLiterals:
+  Description: Checks if uses of quotes match the configured preference.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-string-literals
+  Enabled: false
+  EnforcedStyle: double_quotes
+  SupportedStyles:
+  - single_quotes
+  - double_quotes
+Style/StringLiteralsInInterpolation:
+  Description: Checks if uses of quotes inside expressions in interpolated strings
+    match the configured preference.
+  Enabled: false
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+  - single_quotes
+  - double_quotes
+
+Metrics/LineLength:
+  Description: Limit lines to 80 characters.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#80-character-limits
+  Enabled: false
+  Max: 80
+  AllowURI: true
+  URISchemes:
+  - http
+  - https
+
+Style/AlignHash:
+  Description: Align the elements of a hash literal if they span more than one line.
+  Enabled: true
+  EnforcedHashRocketStyle: key
+  EnforcedColonStyle: key
+  EnforcedLastArgumentHashStyle: always_ignore
+  SupportedLastArgumentHashStyles:
+  - always_inspect
+  - always_ignore
+  - ignore_implicit
+  - ignore_explicit
+DotPosition:
+  EnforcedStyle: trailing
