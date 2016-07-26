@@ -10,7 +10,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rake'
 gem 'simple_form'
@@ -31,7 +31,7 @@ gem 'rollbar'
 gem 'newrelic_rpm'
 gem 'pry-rails', group: :development
 gem 'rubocop', group: :development
-gem "puma" 
+gem "puma"
 
 group :development, :test do
   gem 'byebug'
