@@ -1,9 +1,8 @@
 == README
 
-{<img src="https://travis-ci.org/elavretskiy/flashcards.svg?branch=seventh-task"
-alt="Build Status" />}[https://travis-ci.org/elavretskiy/flashcards]
+[![Code Climate](https://codeclimate.com/github/ulizko/new_flashcards/badges/gpa.svg)](https://codeclimate.com/github/ulizko/new_flashcards)
 
-{<img src="https://codeclimate.com/repos/551d5933695680514c00019c/badges/20539730e3e119e4d337/gpa.svg" />}[https://codeclimate.com/repos/551d5933695680514c00019c/feed]
+[![Build Status](https://travis-ci.org/ulizko/new_flashcards.svg?branch=Alien_code)](https://travis-ci.org/ulizko/new_flashcards)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
