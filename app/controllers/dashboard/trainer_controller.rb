@@ -1,5 +1,5 @@
 class Dashboard::TrainerController < Dashboard::BaseController
-  before_filter :find_card, only: [:review_card]
+  before_action :find_card, only: [:review_card]
 
   def index
     block = current_user.current_block
@@ -16,7 +16,7 @@ class Dashboard::TrainerController < Dashboard::BaseController
 
   def review_card
     check_result = @card.check_translation(user_translation)
-    if check_result[:state] && check_result[:distance] == 0
+    if check_result[:state] && check_result[:distance].zero?
       flash[:notice] = t(:correct_translation_notice)
     elsif check_result[:state]
       flash[:alert] = t 'translation_from_misprint_alert',

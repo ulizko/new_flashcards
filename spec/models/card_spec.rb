@@ -71,7 +71,7 @@ describe Card do
     card = Card.create(original_text: 'дом', translated_text: 'house',
                        user_id: 1, block_id: 1)
     expect(card.review_date.strftime('%Y-%m-%d %H:%M')).
-        to eq(Time.zone.now.strftime('%Y-%m-%d %H:%M'))
+      to eq(Time.zone.now.strftime('%Y-%m-%d %H:%M'))
   end
 
   it 'check_translation Eng OK' do

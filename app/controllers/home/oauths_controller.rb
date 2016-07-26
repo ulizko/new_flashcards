@@ -19,7 +19,7 @@ class Home::OauthsController < Home::BaseController
                                               provider: provider.titleize)
       rescue
         redirect_to user_sessions_path, alert: (t 'log_out_failed_provider_alert',
-                                                    provider: provider.titleize)
+                                                   provider: provider.titleize)
       end
     end
   end

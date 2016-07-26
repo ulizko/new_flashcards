@@ -1,4 +1,4 @@
-class Card < ActiveRecord::Base
+class Card < ApplicationRecord
   belongs_to :user
   belongs_to :block
 
@@ -19,10 +19,11 @@ class Card < ActiveRecord::Base
                                     full_downcase(user_translation))
     sm_hash = SuperMemo.algorithm(interval, repeat, efactor, attempt, distance)
     state = if distance <= SuperMemo::DISTANCE_LIMIT
-              sm_hash.merge!(review_date: Time.now + interval.days, attempt: 1)
+              sm_hash[:review_date] = Time.now + interval.days
+              sm_hash[:attempt] = 1
               true
             else
-              sm_hash.merge!(attempt: [attempt + 1, 5].min)
+              sm_hash[:attempt] = [attempt + 1, 5].min
               false
             end
     update_attributes(sm_hash)
