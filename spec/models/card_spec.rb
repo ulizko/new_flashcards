@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Card do
+RSpec.describe Card, type: :model do
   it 'create card with empty original text' do
     card = Card.create(original_text: '', translated_text: 'house', user_id: 1,
                        block_id: 1)

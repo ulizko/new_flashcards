@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'support/helpers/login_helper.rb'
 include LoginHelper
 
-describe 'password authentication' do
+RSpec.describe 'password authentication', type: :feature do
   describe 'register' do
     before do
       visit root_path
