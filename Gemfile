@@ -29,9 +29,12 @@ gem 'http_accept_language'
 gem 'routing-filter'
 gem 'rollbar'
 gem 'newrelic_rpm'
-gem 'pry-rails', group: :development
-gem 'rubocop', group: :development
 gem "puma"
+
+group :development do
+  gem 'pry-rails'
+  gem 'rubocop'
+end
 
 group :development, :test do
   gem 'byebug'
