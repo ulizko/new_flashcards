@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: <%= node['postgresql']['password']['postgres'] %>
+  host: <%= ENV['IP'] %>
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: <%= "#{node['new_flashcards']['name']}_development" %>
+  
+test:
+  <<: *default
+  database: <%= "#{node['new_flashcards']['name']}_test" %>
+
+production:
+  <<: *default
+  username: postgres
+  password: 
+  min_messages: WARNING
+  database: <%= "#{node['new_flashcards']['name']}_production" %>

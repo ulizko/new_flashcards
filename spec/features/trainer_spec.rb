@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'support/helpers/login_helper.rb'
 include LoginHelper
 
-describe 'review cards without blocks' do
+RSpec.describe 'review cards without blocks', type: :feature do
   describe 'training without cards' do
     before(:each) do
       create(:user)

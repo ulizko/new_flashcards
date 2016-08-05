@@ -1,4 +1,6 @@
-class Home::HomeController < Home::BaseController
-  def index
+module Home
+  class HomeController < BaseController
+    def index
+    end
   end
 end
