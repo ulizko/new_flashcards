@@ -39,6 +39,7 @@ ru:
   user: 'Пользователь'
   card: 'Карточка'
   block: 'Колода'
+  all_users_label: 'Все пользователи'
 
   activerecord:
     errors:

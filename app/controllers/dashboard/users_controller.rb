@@ -1,5 +1,9 @@
 module Dashboard
   class UsersController < BaseController
+    def index
+      @users = User.all
+    end
+
     def destroy
       current_user.destroy
       redirect_to login_path, notice: 'Пользователь успешно удален.'

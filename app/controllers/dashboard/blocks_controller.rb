@@ -4,7 +4,11 @@ module Dashboard
                                      :reset_as_current]
 
     def index
-      @blocks = current_user.blocks.all.order('title')
+      @blocks = if current_user.is_admin?
+                  Block.all.order('title')
+                else
+                  current_user.blocks.all.order('title')
+                end
     end
 
     def new

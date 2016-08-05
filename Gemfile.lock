@@ -217,6 +217,7 @@ GEM
     rake (11.2.2)
     rdoc (4.2.2)
       json (~> 1.4)
+    rolify (5.1.0)
     rollbar (2.12.0)
       multi_json
     routing-filter (0.6.0)
@@ -315,6 +316,7 @@ DEPENDENCIES
   rails_admin (>= 1.0.0.rc)
   rake
   remotipart!
+  rolify
   rollbar
   routing-filter
   rspec-rails
