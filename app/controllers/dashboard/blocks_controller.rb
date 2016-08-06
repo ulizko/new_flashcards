@@ -57,7 +57,7 @@ module Dashboard
     end
 
     def block_params
-      params.require(:block).permit(:title)
+      params.require(:block).permit(:title, :user_id)
     end
   end
 end
