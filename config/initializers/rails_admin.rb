@@ -22,9 +22,13 @@ RailsAdmin.config do |config|
   ## == Gravatar integration ==
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar true
-  config.main_app_name = Proc.new {
-    ["Flashcarder", "(#{Time.zone.now.to_s(:time)})"]
-  }
+  config.authenticate_with do
+    redirect_to main_app.root_path unless current_user.is_admin?
+  end
+  config.current_user_method(&:current_user)
+  # config.main_app_name = Proc.new {
+  #   ["Flashcarder", "(#{Time.zone.now.to_s(:time)})"]
+  # }
   config.model 'Authentication' do
     visible false
   end
@@ -38,13 +42,6 @@ RailsAdmin.config do |config|
   end
   config.model 'Card' do
     label I18n.t('card')
-    list do
-      fields :created_at, :updated_at do          # adding and configuring
-        label do
-          "#{label} (timestamp)"
-        end
-      end
-    end
   end
   config.model 'Block' do
     label I18n.t('block')

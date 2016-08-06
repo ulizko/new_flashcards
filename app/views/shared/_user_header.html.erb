@@ -10,6 +10,6 @@
     <%= link_to t(:delete_user_label), user_path(current_user),
                 method: :delete, class: 'navbar-link',
                 data: { confirm: 'Удалить пользователя?' } %> |
-    <%= link_to t(:log_out_label), :logout, method: :post,
+    <%= link_to t(:log_out_label), :logout, method: :delete,
                 class: 'navbar-link' %>
 </p>

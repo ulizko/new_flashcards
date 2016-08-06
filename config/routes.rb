@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   scope module: 'dashboard' do
     resources :user_sessions, only: :destroy
     resources :users, only: [:destroy, :index]
-    post 'logout' => 'user_sessions#destroy', :as => :logout
+    delete 'logout' => 'user_sessions#destroy', :as => :logout
 
     resources :cards
 
