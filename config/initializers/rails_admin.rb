@@ -1,11 +1,12 @@
 RailsAdmin.config do |config|
   ## == Pundit ==
-  # config.authorize_with :pundit
+  config.authorize_with :pundit
 
-  config.authenticate_with do
-    redirect_to main_app.root_path unless current_user.is_admin?
-  end
+  # config.authenticate_with do
+  #   redirect_to main_app.root_path, error: 'You are not authorized to perform this action.' unless current_user.is_admin?
+  # end
   config.current_user_method(&:current_user)
+  
   config.model 'Authentication' do
     visible false
   end

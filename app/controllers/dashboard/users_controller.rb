@@ -1,7 +1,8 @@
 module Dashboard
   class UsersController < BaseController
+
     def index
-      @users = User.all
+      @users = policy_scope(User).all
     end
 
     def destroy

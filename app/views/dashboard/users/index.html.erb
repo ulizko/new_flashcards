@@ -1,11 +1,11 @@
 <table class="table table-hover table-condensed">
   <thead>
-  <tr>
-    <th>Email</th>
-    <th>Количество карточек</th>
-    <th>Количество непросмотренных карточек</th>
-    <th colspan="2"></th>
-  </tr>
+    <tr>
+      <th>Email</th>
+      <th>Количество карточек</th>
+      <th>Количество непросмотренных карточек</th>
+      <th colspan="2"></th>
+    </tr>
   </thead>
   <tbody>
   <% @users.each do |user| %>
@@ -13,9 +13,6 @@
       <td><%= user.email %></td>
       <td><%= user.cards.count %></td>
       <td><%= user.cards.pending.count %></td>
-      <td><%= link_to 'Редактировать', edit_profile_path(user) %></td>
-      <td><%= link_to 'Удалить', user, method: :delete,
-                      data: { confirm: 'Удалить запись?' } %></td>
     </tr>
   <% end %>
   </tbody>

@@ -4,11 +4,7 @@ module Dashboard
                                      :reset_as_current]
 
     def index
-      @blocks = if current_user.is_admin?
-                  Block.all.order('title')
-                else
-                  current_user.blocks.all.order('title')
-                end
+      @blocks = policy_scope(Block).all.order('title')
     end
 
     def new
@@ -28,6 +24,7 @@ module Dashboard
     end
 
     def update
+      # @block = autorize Block.find(params[:id])
       if @block.update(block_params)
         redirect_to blocks_path
       else

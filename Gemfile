@@ -33,6 +33,7 @@ gem "puma"
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 gem 'rolify'
+gem 'pundit'
 
 group :development do
   gem 'pry-rails'
