@@ -24,6 +24,8 @@ ru:
       all_blocks: 'Все колоды'
       all_cards: 'Все карточки'
       all_users: 'Все пользователи'
+      user_profile: 'Профиль'
+      dashboard: 'Панель управления'
       log_out: 'Выход'
     user_header:
       all_blocks: 'Все колоды'
@@ -81,7 +83,7 @@ ru:
         password: 'Пароль'
         log_in: 'Войти'
       new:
-        sing_in: 'Залогиниться'
+        sign_in: 'Залогиниться'
     users:
       new: 
         registration: 'Зарегистрироваться'
@@ -98,135 +100,3 @@ ru:
         confirmation: 'Значения не совпадают.'
         taken: 'Не уникальное значение.'
         invalid: 'Не верный формат.'
-  # defaults:
-  #   show: "Показать"
-  #   edit: "Редактировать"
-  #   delete: "Удалить"
-  #   back: "Назад"
-  #   add_new_deck: "Добавить новую колоду"
-  # application:
-  #   welcome:
-  #     not_authenticated: "Войдите или зарегистрируйтесь"
-  # layouts:
-  #   application:
-  #     register: "Зарегистрироваться"
-  #     login: "Войти"
-  #     logout: "Выйти"
-  #     flashcards: "Флэшкарточкер"
-  #     langauge: "Язык"
-  #     russian: "Русский"
-  #     english: "Английский"
-  #     all_cards: "Все карточки"
-  #     my_decks: "Мои колоды"
-  #     add_card: "Добавить карточку"
-  # # dashboard:
-  #   cards:
-  #     index: 
-  #       all_cards: "Все карточки"
-  #     create:
-  #       successful_create_card: "Карточка успешно создана"
-  #     form:
-  #       action_card: "%{action} карточку"
-  #       edit: "Обновить"
-  #       new: "Создать"
-  #       create: "Создать"
-  #       name: "Имя колоды"
-  #   decks:
-  #     index:
-  #       my_decks: "Мои колоды"
-  #     update:
-  #       successful_set_current: "Текущая колода успешно изменена"
-  #     form:
-  #       action_deck: "%{action} колоду"
-  #       edit: "Обновить"
-  #       new: "Создать"
-  #     table:
-  #       unset: "Снять %{current}"
-  #       set: "Установить %{current}"
-  #       current: "текущую"
-  #     create:
-  #       successful_create_deck: "Колода успешно создана"
-  #   users:
-  #     update:
-  #       profile_updated: "Профиль обновлен"
-  #   review:
-  #     check:
-  #       right: "Верно! Давай проверим следующую карточку"
-  #       oops: "Ой! Твой ответ верный, но ты сделал опечатку. Правильный перевод: %{original_text}, твой ответ: %{check_translate}"
-  #       wrong: "Неверно! Попробуй следующую карточку"
-  #       too_long: "Ты ответил правильно. Но ты слишком долго думал. Придется повторить."
-  #     form:
-  #       don't_have_cards: "У Вас пока нет добавленых карточек."
-  #       no_cards_for_review: "На сегодня карточки закончились."
-  #       check_card: "Проверить карточку"
-  #       enter_translate: "Введите перевод"
-  #   user_sessions:
-  #     destroy:
-  #       logged_out: "Вы вышли"
-  # home:
-  #   user_sessions:
-  #     form:
-  #       login: "Войти"
-  #       email: "Емэйл"
-  #       password: "Пароль"
-  #     new:
-  #       login_with_: "Войти через %{provider}"
-  #       login: "Войти"
-  #     create:
-  #       login_successful: "Удачный вход"
-  #       login_failed: "Неудачный вход"
-  #   users:
-  #     create:
-  #       welcome: "Добро пожаловать!"
-  #     new:
-  #       register: "Зарегистрироваться"
-  #     form:
-  #       login: "Войти"
-  #       email: "Емэйл"
-  #       password: "Пароль"
-  #       confirmation: "Подтверждение пароля"
-  #       langauge: "Язык"
-  #       action_user: "%{action} пользователя"
-  #       update: "Обновить"
-  #       edit: "Обновить"
-  #       new: "Создать"
-  #   oauths:
-  #     callback:
-  #       logged_in_from: "Вы вошли через %{provider}"
-  #       failed_login_from: "Неудачный вход через %{provider}"
-  # notifications_mailer:
-  #   pending_cards:
-  #     subject: "Непросмотренные карточки"
-  #     greeting: "Привет, дорогой пользователь Флэшкарточкера (%{user})"
-  #     content: "У тебя есть не просмотренные карточки! Давай, хватит лениться! Нужно взять и продолжить учиться!"
-  # activerecord:
-  #   models:
-  #     card:
-  #       zero: "Нет карточек"
-  #       one: "%{count} карточка"
-  #       few: "%{count} карточки"
-  #       many: "%{count} карточек"
-  #     deck:
-  #       zero: "Нет колод"
-  #       one: "%{count} колода"
-  #       few: "%{count} колоды"
-  #       many: "%{count} колод"
-  #   attributes:
-  #     card:
-  #       translated_text: "Перевод"
-  #       original_text: "Оригинал"
-  #       review_date: "Дата пересмотра"
-  #     deck:
-  #       name: "Имя колоды"
-  #     user:
-  #       email: "Емэйл"
-  #       password: "Пароль"
-  #       confirmation: "Подтверждение пароля"
-  #   errors:
-  #     models:
-  #       card:
-  #         attributes:
-  #           original_text:
-  #             invalid:  " не может содержать цифры или начинаться с пробела"
-  #           translated_text:
-  #             invalid:  " не может содержать цифры или начинаться с пробела"

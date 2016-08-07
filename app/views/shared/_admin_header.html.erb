@@ -4,8 +4,10 @@
   <li><%= link_to t('.all_users'), users_path %></li>
 </ul>
 <p class="navbar-text navbar-right">
-    <%= link_to 'Панель управления', rails_admin_path,
+  <%= link_to t('.user_profile'), edit_profile_path(current_user),
                 class: 'navbar-link' %> |
-    <%= link_to t('.log_out'), :logout, method: :delete,
-                class: 'navbar-link' %>
+  <%= link_to t('.dashboard'), rails_admin_path,
+              class: 'navbar-link' %> |
+  <%= link_to t('.log_out'), :logout, method: :delete,
+              class: 'navbar-link' %>
 </p>

@@ -1,6 +1,10 @@
 # Russian. Updated 2014-04-01
 
 ru:
+  card: 'Карточка'
+  block: 'Колода'
+  user: 'Пользователь'
+  role: 'Роль'
   admin:
     js:
       true: 'True'

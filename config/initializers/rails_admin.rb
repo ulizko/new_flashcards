@@ -11,7 +11,7 @@ RailsAdmin.config do |config|
     visible false
   end
   config.model 'User' do
-    label I18n.t('user')
+    label I18n.t('.user')
     list do
       field :email
       field :locale
@@ -19,7 +19,7 @@ RailsAdmin.config do |config|
     end
   end
   config.model 'Card' do
-    label I18n.t('card')
+    label I18n.t('.card')
     list do
       exclude_fields :created_at, :updated_at
       field :user do
@@ -30,10 +30,10 @@ RailsAdmin.config do |config|
     end
   end
   config.model 'Block' do
-    label I18n.t('block')
+    label I18n.t('.block')
   end
   config.model 'Role' do
-    label I18n.t('role')
+    label I18n.t('.role')
     list do
       field :user do
         pretty_value do
