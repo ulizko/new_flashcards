@@ -36,7 +36,7 @@ class ApplicationPolicy
   end
 
   def respond_to_missing?(method_name)
-    actions.include? method_name[0..-2].to_sym || super
+    actions.include?(method_name[0..-2].to_sym) || super
   end
 
   def scope

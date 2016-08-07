@@ -25,7 +25,7 @@ RSpec.describe 'password authentication', type: :feature do
 
     it 'e-mail has already been taken' do
       register('test@test.com', '12345', '12345', 'Зарегистрироваться')
-      click_link 'Выйти'
+      click_link 'Выход'
       register('test@test.com', '12345', '12345', 'Зарегистрироваться')
       expect(page).to have_content 'Не уникальное значение.'
     end
@@ -87,7 +87,7 @@ RSpec.describe 'password authentication', type: :feature do
 
     it 'register TRUE' do
       click_link 'en'
-      register('test@test.com', '12345', '12345', 'Sing up')
+      register('test@test.com', '12345', '12345', 'Sign up')
       expect(page).to have_content 'User created successfully.'
     end
 
@@ -100,11 +100,11 @@ RSpec.describe 'password authentication', type: :feature do
 
     it 'available locale' do
       click_link 'en'
-      register('test@test.com', '12345', '12345', 'Sing up')
-      click_link 'User profile'
+      register('test@test.com', '12345', '12345', 'Sign up')
+      click_link 'Profile'
       fill_in 'user[password]', with: '12345'
       fill_in 'user[password_confirmation]', with: '12345'
-      click_button 'Сохранить'
+      click_button 'Save'
       expect(page).to have_content 'Профиль пользователя успешно обновлен.'
     end
 

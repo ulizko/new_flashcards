@@ -1,6 +1,5 @@
 module Dashboard
   class UsersController < BaseController
-
     def index
       @users = policy_scope(User).all
     end

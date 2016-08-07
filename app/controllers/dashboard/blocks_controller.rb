@@ -24,7 +24,6 @@ module Dashboard
     end
 
     def update
-      # @block = autorize Block.find(params[:id])
       if @block.update(block_params)
         redirect_to blocks_path
       else

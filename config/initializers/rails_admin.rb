@@ -6,7 +6,7 @@ RailsAdmin.config do |config|
   #   redirect_to main_app.root_path, error: 'You are not authorized to perform this action.' unless current_user.is_admin?
   # end
   config.current_user_method(&:current_user)
-  
+
   config.model 'Authentication' do
     visible false
   end
@@ -20,9 +20,27 @@ RailsAdmin.config do |config|
   end
   config.model 'Card' do
     label I18n.t('card')
+    list do
+      exclude_fields :created_at, :updated_at
+      field :user do
+        pretty_value do
+          value.email
+        end
+      end
+    end
   end
   config.model 'Block' do
     label I18n.t('block')
+  end
+  config.model 'Role' do
+    label I18n.t('role')
+    list do
+      field :user do
+        pretty_value do
+          value.email
+        end
+      end
+    end
   end
 
   config.actions do
@@ -34,7 +52,6 @@ RailsAdmin.config do |config|
     show
     edit
     delete
-    show_in_app
 
     ## With an audit adapter, you can add:
     # history_index
