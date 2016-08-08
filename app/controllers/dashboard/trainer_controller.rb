@@ -1,5 +1,5 @@
 module Dashboard
-  class TrainerController < BaseController
+  class TrainerController < ApplicationController
     before_action :find_card, only: [:review_card]
 
     def index

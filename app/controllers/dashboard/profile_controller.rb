@@ -1,5 +1,5 @@
 module Dashboard
-  class ProfileController < BaseController
+  class ProfileController < ApplicationController
     def edit
     end
 

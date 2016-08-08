@@ -1,10 +1,10 @@
 module Dashboard
-  class BlocksController < BaseController
+  class BlocksController < ApplicationController
     before_action :set_block, only: [:destroy, :edit, :update, :set_as_current,
                                      :reset_as_current]
 
     def index
-      @blocks = current_user.blocks.all.order('title')
+      @blocks = policy_scope(Block).order('title')
     end
 
     def new
@@ -53,7 +53,7 @@ module Dashboard
     end
 
     def block_params
-      params.require(:block).permit(:title)
+      params.require(:block).permit(:title, :user_id)
     end
   end
 end

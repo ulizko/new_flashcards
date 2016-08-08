@@ -1,9 +1,9 @@
 module Dashboard
-  class CardsController < BaseController
+  class CardsController < ApplicationController
     before_action :set_card, only: [:destroy, :edit, :update]
 
     def index
-      @cards = current_user.cards.all.order('review_date')
+      @cards = policy_scope(Card).order('review_date')
     end
 
     def new

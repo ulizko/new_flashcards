@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   filter :locale
 
   root 'main#index'
@@ -15,8 +17,8 @@ Rails.application.routes.draw do
 
   scope module: 'dashboard' do
     resources :user_sessions, only: :destroy
-    resources :users, only: :destroy
-    post 'logout' => 'user_sessions#destroy', :as => :logout
+    resources :users, only: [:destroy, :index]
+    delete 'logout' => 'user_sessions#destroy', :as => :logout
 
     resources :cards
 

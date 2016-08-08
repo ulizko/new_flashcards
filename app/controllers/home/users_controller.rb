@@ -1,5 +1,7 @@
 module Home
-  class UsersController < BaseController
+  class UsersController < ApplicationController
+    skip_before_action :require_login, only: [:new, :create]
+
     def new
       if current_user
         redirect_to root_path
