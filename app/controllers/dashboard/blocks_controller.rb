@@ -1,10 +1,10 @@
 module Dashboard
-  class BlocksController < BaseController
+  class BlocksController < ApplicationController
     before_action :set_block, only: [:destroy, :edit, :update, :set_as_current,
                                      :reset_as_current]
 
     def index
-      @blocks = policy_scope(Block).all.order('title')
+      @blocks = policy_scope(Block).order('title')
     end
 
     def new

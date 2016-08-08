@@ -8,7 +8,7 @@ RSpec.describe 'roles', type: :feature do
     before(:each) do
       user.add_role :admin
       visit root_path
-      login('test@test.com', '12345', 'Войти')
+      login('test@test.com', '12345', I18n.t('shared.header.log_in'))
     end
 
     it 'can show all users' do
@@ -29,7 +29,7 @@ RSpec.describe 'roles', type: :feature do
     let!(:user) { create(:user) }
     before(:each) do
       visit root_path
-      login('test@test.com', '12345', 'Войти')
+      login('test@test.com', '12345', I18n.t('shared.header.log_in'))
     end
 
     it 'can\'t show all users' do
