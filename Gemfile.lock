@@ -86,6 +86,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     figaro (1.1.1)
       thor (~> 0.14)
+    flickraw (0.9.9)
     fog-aws (0.11.0)
       fog-core (~> 1.38)
       fog-json (~> 1.0)
@@ -305,6 +306,7 @@ DEPENDENCIES
   factory_girl_rails
   faraday
   figaro
+  flickraw
   fog-aws
   http_accept_language
   jbuilder (~> 2.0)

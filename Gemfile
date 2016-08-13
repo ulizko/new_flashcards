@@ -35,6 +35,7 @@ gem 'rails_admin', '>= 1.0.0.rc'
 gem 'rolify'
 gem 'pundit'
 gem 'rails-i18n', '~> 5.0.0'
+gem 'flickraw'
 
 group :development do
   gem 'pry-rails'
