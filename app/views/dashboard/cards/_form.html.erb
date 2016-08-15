@@ -1,4 +1,4 @@
-<%= simple_form_for card, :html => {:multipart => true} do |f| %>
+<%= simple_form_for card, :html => {:multipart => true, class: "dropzone"} do |f| %>
   <div class="form-group">
     <%= f.input :original_text,  as: :text, label: t('.original'),
                 input_html: { class: 'form-control', required: true,

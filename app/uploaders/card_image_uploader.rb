@@ -8,7 +8,7 @@ class CardImageUploader < CarrierWave::Uploader::Base
   end
 
   def cache_dir
-    "/tmp/uploads/#{model.class.to_s.underscore}/#{mounted_as}"
+    "uploads/tmp/#{model.class.to_s.underscore}/#{mounted_as}"
   end
 
   process resize_to_fit: [360, 360]
