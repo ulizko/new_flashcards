@@ -1,2 +1,33 @@
-<h1>Search#new</h1>
-<p>Find me in app/views/search/new.html.erb</p>
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Загрузить из Flickr</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <%= simple_form_for :search, url: search_path, method: :get, remote: true do |f| %>
+              <%= f.input :query, label: false, class: "form-control" %>
+              <%= f.button :submit, "Go", class: "btn btn-default" %>
+            <% end %>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">Go!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+        
+          <div id="result">
+            <%= render partial: 'dashboard/search/result' %>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
