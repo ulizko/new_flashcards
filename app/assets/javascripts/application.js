@@ -27,5 +27,4 @@ $(document).on('click', '#card_image', function(){
   $('#card_remote_image_url').val('');
   $('#cached_image').attr('src', '');
   $('#hiddenDiv').addClass('hidden');
-  console.log('click');
 });

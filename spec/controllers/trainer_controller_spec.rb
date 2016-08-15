@@ -244,7 +244,7 @@ module Dashboard
                         interval: 16, repeat: 3, efactor: 2.7, quality: 5)
           card = check_review_card(card, 'RoR', 3)
           card = check_review_card(card, 'house', 1)
-          eexpect(I18n.l(card.review_date)).to eq(I18n.l(Time.zone.now + 1.days))
+          expect(I18n.l(card.review_date)).to eq(I18n.l(Time.zone.now + 1.days))
           expect(card.interval).to eq(6)
           expect(card.repeat).to eq(2)
           expect(card.attempt).to eq(1)
