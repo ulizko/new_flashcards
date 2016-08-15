@@ -4,7 +4,7 @@
     <% @photos.each_with_index do |photo, index| %>
       <div class="col-md-2 <%= 'col-md-offset-1' if [0, 5].include? index %>">
         <a href="#" class="thumbnail">
-          <img src="<%= photo %>" alt="Select photo">
+          <img class="remote_image" src="<%= photo %>" alt="Select photo">
         </a>
       </div>
     <% end %>

@@ -13,3 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).on('click', '.remote_image', function(){
+  var url = $(this).attr('src');
+  $('#myModal').modal('toggle');
+  $('#card_remote_image_url').val(url);
+  $('#cached_image').attr('src', url);
+  $('#hiddenDiv').removeClass('hidden');
+  $('#card_image').val('');
+});
+
+$(document).on('click', '#card_image', function(){
+  $('#card_remote_image_url').val('');
+  $('#cached_image').attr('src', '');
+  $('#hiddenDiv').addClass('hidden');
+  console.log('click');
+});
