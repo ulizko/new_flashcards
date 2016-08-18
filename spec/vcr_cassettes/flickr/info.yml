@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.flickr.com/services/rest/
+    body:
+      encoding: US-ASCII
+      string: photo_id=28439083854&method=flickr.photos.getInfo&format=json&nojsoncallback=1
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - FlickRaw/0.9.9
+      Authorization:
+      - OAuth realm="https://api.flickr.com/services/rest/", oauth_consumer_key="dad0eb26ae1afd1f034759702345c775",
+        oauth_nonce="5fnhVnzGoNRcjUiqtC5MfxrrNiAw4cfMs0KKgTrFYzA%3D", oauth_signature="50e79f0c57825cc4%26",
+        oauth_signature_method="PLAINTEXT", oauth_timestamp="1471516336", oauth_token="",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 18 Aug 2016 10:32:16 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1222'
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www243.flickr.bf1.yahoo.com
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding
+      Age:
+      - '0'
+      Via:
+      - http/1.1 fts111.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        r14.ycpi.ams.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"photo":{"id":"28439083854","secret":"49cd1a4ab6","server":"8843","farm":9,"dateuploaded":"1471499543","isfavorite":0,"license":"0","safety_level":"0","rotation":0,"originalsecret":"f6905704ff","originalformat":"jpg","owner":{"nsid":"66887658@N05","username":"v8dub","realname":"Daniel  _
+        v8dub","location":"Fribourg, Suisse","iconserver":"8259","iconfarm":9,"path_alias":"v8dub"},"title":{"_content":"Chevrolet
+        Blazer"},"description":{"_content":" Deni''s Diner Route 66, Pensier \/ Fribourg\n
+        <a href=\"http:\/\/www.denis-diner.ch\/R66\/index.php\/notre-carte\" rel=\"nofollow\">www.denis-diner.ch\/R66\/index.php\/notre-carte<\/a>                                 "},"visibility":{"ispublic":1,"isfriend":0,"isfamily":0},"dates":{"posted":"1471499543","taken":"2016-08-13
+        12:40:38","takengranularity":"0","takenunknown":"0","lastupdate":"1471506772"},"views":"125","editability":{"cancomment":0,"canaddmeta":0},"publiceditability":{"cancomment":1,"canaddmeta":0},"usage":{"candownload":1,"canblog":0,"canprint":0,"canshare":0},"comments":{"_content":"0"},"notes":{"note":[]},"people":{"haspeople":0},"tags":{"tag":[{"id":"66882318-28439083854-632","author":"66887658@N05","authorname":"v8dub","raw":"Chevrolet","_content":"chevrolet","machine_tag":false},{"id":"66882318-28439083854-41869","author":"66887658@N05","authorname":"v8dub","raw":"Blazer","_content":"blazer","machine_tag":false},{"id":"66882318-28439083854-13393","author":"66887658@N05","authorname":"v8dub","raw":"Chevy","_content":"chevy","machine_tag":false},{"id":"66882318-28439083854-4326","author":"66887658@N05","authorname":"v8dub","raw":"4x4","_content":"4x4","machine_tag":false},{"id":"66882318-28439083854-2107","author":"66887658@N05","authorname":"v8dub","raw":"schweiz","_content":"schweiz","machine_tag":false},{"id":"66882318-28439083854-4110","author":"66887658@N05","authorname":"v8dub","raw":"suisse","_content":"suisse","machine_tag":false},{"id":"66882318-28439083854-2110","author":"66887658@N05","authorname":"v8dub","raw":"Switzerland","_content":"switzerland","machine_tag":false},{"id":"66882318-28439083854-25199","author":"66887658@N05","authorname":"v8dub","raw":"Fribourg","_content":"fribourg","machine_tag":false},{"id":"66882318-28439083854-35949","author":"66887658@N05","authorname":"v8dub","raw":"freiburg","_content":"freiburg","machine_tag":false},{"id":"66882318-28439083854-13824","author":"66887658@N05","authorname":"v8dub","raw":"American","_content":"american","machine_tag":false},{"id":"66882318-28439083854-498537","author":"66887658@N05","authorname":"v8dub","raw":"pkw","_content":"pkw","machine_tag":false},{"id":"66882318-28439083854-9824","author":"66887658@N05","authorname":"v8dub","raw":"voiture","_content":"voiture","machine_tag":false},{"id":"66882318-28439083854-923","author":"66887658@N05","authorname":"v8dub","raw":"Car","_content":"car","machine_tag":false},{"id":"66882318-28439083854-368579","author":"66887658@N05","authorname":"v8dub","raw":"wagen","_content":"wagen","machine_tag":false},{"id":"66882318-28439083854-8505504","author":"66887658@N05","authorname":"v8dub","raw":"worldcars","_content":"worldcars","machine_tag":false},{"id":"66882318-28439083854-33","author":"66887658@N05","authorname":"v8dub","raw":"Auto","_content":"auto","machine_tag":false},{"id":"66882318-28439083854-3092","author":"66887658@N05","authorname":"v8dub","raw":"automobile","_content":"automobile","machine_tag":false},{"id":"66882318-28439083854-9027","author":"66887658@N05","authorname":"v8dub","raw":"automotive","_content":"automotive","machine_tag":false}]},"location":{"latitude":"46.841044","longitude":"7.139385","accuracy":"16","context":"0","locality":{"_content":"Pensier","place_id":"F_DvvslTUrvzDHfjfA","woeid":"20103586"},"county":{"_content":"See\/Lac","place_id":"t_nIGjdQUL9WmyMEdw","woeid":"12593191"},"region":{"_content":"Canton
+        of Fribourg","place_id":"De0qEi9TUb7qWOdz","woeid":"2347088"},"country":{"_content":"Switzerland","place_id":"HfSZnNxTUb7.Mo5Vpg","woeid":"23424957"},"place_id":"F_DvvslTUrvzDHfjfA","woeid":"20103586"},"geoperms":{"ispublic":1,"iscontact":0,"isfriend":0,"isfamily":0},"urls":{"url":[{"type":"photopage","_content":"https:\/\/www.flickr.com\/photos\/v8dub\/28439083854\/"}]},"media":"photo"},"stat":"ok"}'
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 10:32:16 GMT
+recorded_with: VCR 3.0.3

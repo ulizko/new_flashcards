@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.flickr.com/services/rest/
+    body:
+      encoding: US-ASCII
+      string: method=flickr.reflection.getMethods&format=json&nojsoncallback=1
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - FlickRaw/0.9.9
+      Authorization:
+      - OAuth realm="https://api.flickr.com/services/rest/", oauth_consumer_key="dad0eb26ae1afd1f034759702345c775",
+        oauth_nonce="e74%2BrWnI7QzDE7H2MseIzf6%2FEf%2F%2B33Ce8QTVW4jmljo%3D", oauth_signature="50e79f0c57825cc4%26",
+        oauth_signature_method="PLAINTEXT", oauth_timestamp="1471499972", oauth_token="",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 18 Aug 2016 05:59:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1428'
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www308.flickr.bf1.yahoo.com
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding
+      Age:
+      - '1'
+      Via:
+      - http/1.1 fts109.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        r03.ycpi.ams.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+      Y-Trace:
+      - BAEAQAAAAADUGHXvAROy3gAAAAAAAAAA9LUTBi65qeQAAAAAAAAAAAAFOlJJLWoTAAU6UkkwHm_JnlXxAAAAAA--
+    body:
+      encoding: ASCII-8BIT
+      string: '{"methods":{"method":[{"_content":"flickr.activity.userComments"},{"_content":"flickr.activity.userPhotos"},{"_content":"flickr.auth.checkToken"},{"_content":"flickr.auth.getFrob"},{"_content":"flickr.auth.getFullToken"},{"_content":"flickr.auth.getToken"},{"_content":"flickr.auth.oauth.checkToken"},{"_content":"flickr.auth.oauth.getAccessToken"},{"_content":"flickr.blogs.getList"},{"_content":"flickr.blogs.getServices"},{"_content":"flickr.blogs.postPhoto"},{"_content":"flickr.cameras.getBrandModels"},{"_content":"flickr.cameras.getBrands"},{"_content":"flickr.collections.getInfo"},{"_content":"flickr.collections.getTree"},{"_content":"flickr.commons.getInstitutions"},{"_content":"flickr.contacts.getList"},{"_content":"flickr.contacts.getListRecentlyUploaded"},{"_content":"flickr.contacts.getPublicList"},{"_content":"flickr.contacts.getTaggingSuggestions"},{"_content":"flickr.favorites.add"},{"_content":"flickr.favorites.getContext"},{"_content":"flickr.favorites.getList"},{"_content":"flickr.favorites.getPublicList"},{"_content":"flickr.favorites.remove"},{"_content":"flickr.galleries.addPhoto"},{"_content":"flickr.galleries.create"},{"_content":"flickr.galleries.editMeta"},{"_content":"flickr.galleries.editPhoto"},{"_content":"flickr.galleries.editPhotos"},{"_content":"flickr.galleries.getInfo"},{"_content":"flickr.galleries.getList"},{"_content":"flickr.galleries.getListForPhoto"},{"_content":"flickr.galleries.getPhotos"},{"_content":"flickr.groups.browse"},{"_content":"flickr.groups.discuss.replies.add"},{"_content":"flickr.groups.discuss.replies.delete"},{"_content":"flickr.groups.discuss.replies.edit"},{"_content":"flickr.groups.discuss.replies.getInfo"},{"_content":"flickr.groups.discuss.replies.getList"},{"_content":"flickr.groups.discuss.topics.add"},{"_content":"flickr.groups.discuss.topics.getInfo"},{"_content":"flickr.groups.discuss.topics.getList"},{"_content":"flickr.groups.getInfo"},{"_content":"flickr.groups.join"},{"_content":"flickr.groups.joinRequest"},{"_content":"flickr.groups.leave"},{"_content":"flickr.groups.members.getList"},{"_content":"flickr.groups.pools.add"},{"_content":"flickr.groups.pools.getContext"},{"_content":"flickr.groups.pools.getGroups"},{"_content":"flickr.groups.pools.getPhotos"},{"_content":"flickr.groups.pools.remove"},{"_content":"flickr.groups.search"},{"_content":"flickr.interestingness.getList"},{"_content":"flickr.machinetags.getNamespaces"},{"_content":"flickr.machinetags.getPairs"},{"_content":"flickr.machinetags.getPredicates"},{"_content":"flickr.machinetags.getRecentValues"},{"_content":"flickr.machinetags.getValues"},{"_content":"flickr.panda.getList"},{"_content":"flickr.panda.getPhotos"},{"_content":"flickr.people.findByEmail"},{"_content":"flickr.people.findByUsername"},{"_content":"flickr.people.getGroups"},{"_content":"flickr.people.getInfo"},{"_content":"flickr.people.getLimits"},{"_content":"flickr.people.getPhotos"},{"_content":"flickr.people.getPhotosOf"},{"_content":"flickr.people.getPublicGroups"},{"_content":"flickr.people.getPublicPhotos"},{"_content":"flickr.people.getUploadStatus"},{"_content":"flickr.photos.addTags"},{"_content":"flickr.photos.comments.addComment"},{"_content":"flickr.photos.comments.deleteComment"},{"_content":"flickr.photos.comments.editComment"},{"_content":"flickr.photos.comments.getList"},{"_content":"flickr.photos.comments.getRecentForContacts"},{"_content":"flickr.photos.delete"},{"_content":"flickr.photos.geo.batchCorrectLocation"},{"_content":"flickr.photos.geo.correctLocation"},{"_content":"flickr.photos.geo.getLocation"},{"_content":"flickr.photos.geo.getPerms"},{"_content":"flickr.photos.geo.photosForLocation"},{"_content":"flickr.photos.geo.removeLocation"},{"_content":"flickr.photos.geo.setContext"},{"_content":"flickr.photos.geo.setLocation"},{"_content":"flickr.photos.geo.setPerms"},{"_content":"flickr.photos.getAllContexts"},{"_content":"flickr.photos.getContactsPhotos"},{"_content":"flickr.photos.getContactsPublicPhotos"},{"_content":"flickr.photos.getContext"},{"_content":"flickr.photos.getCounts"},{"_content":"flickr.photos.getExif"},{"_content":"flickr.photos.getFavorites"},{"_content":"flickr.photos.getInfo"},{"_content":"flickr.photos.getNotInSet"},{"_content":"flickr.photos.getPerms"},{"_content":"flickr.photos.getRecent"},{"_content":"flickr.photos.getSizes"},{"_content":"flickr.photos.getUntagged"},{"_content":"flickr.photos.getWithGeoData"},{"_content":"flickr.photos.getWithoutGeoData"},{"_content":"flickr.photos.licenses.getInfo"},{"_content":"flickr.photos.licenses.setLicense"},{"_content":"flickr.photos.notes.add"},{"_content":"flickr.photos.notes.delete"},{"_content":"flickr.photos.notes.edit"},{"_content":"flickr.photos.people.add"},{"_content":"flickr.photos.people.delete"},{"_content":"flickr.photos.people.deleteCoords"},{"_content":"flickr.photos.people.editCoords"},{"_content":"flickr.photos.people.getList"},{"_content":"flickr.photos.recentlyUpdated"},{"_content":"flickr.photos.removeTag"},{"_content":"flickr.photos.search"},{"_content":"flickr.photos.setContentType"},{"_content":"flickr.photos.setDates"},{"_content":"flickr.photos.setMeta"},{"_content":"flickr.photos.setPerms"},{"_content":"flickr.photos.setSafetyLevel"},{"_content":"flickr.photos.setTags"},{"_content":"flickr.photos.suggestions.approveSuggestion"},{"_content":"flickr.photos.suggestions.getList"},{"_content":"flickr.photos.suggestions.rejectSuggestion"},{"_content":"flickr.photos.suggestions.removeSuggestion"},{"_content":"flickr.photos.suggestions.suggestLocation"},{"_content":"flickr.photos.transform.rotate"},{"_content":"flickr.photos.upload.checkTickets"},{"_content":"flickr.photosets.addPhoto"},{"_content":"flickr.photosets.comments.addComment"},{"_content":"flickr.photosets.comments.deleteComment"},{"_content":"flickr.photosets.comments.editComment"},{"_content":"flickr.photosets.comments.getList"},{"_content":"flickr.photosets.create"},{"_content":"flickr.photosets.delete"},{"_content":"flickr.photosets.editMeta"},{"_content":"flickr.photosets.editPhotos"},{"_content":"flickr.photosets.getContext"},{"_content":"flickr.photosets.getInfo"},{"_content":"flickr.photosets.getList"},{"_content":"flickr.photosets.getPhotos"},{"_content":"flickr.photosets.orderSets"},{"_content":"flickr.photosets.removePhoto"},{"_content":"flickr.photosets.removePhotos"},{"_content":"flickr.photosets.reorderPhotos"},{"_content":"flickr.photosets.setPrimaryPhoto"},{"_content":"flickr.places.find"},{"_content":"flickr.places.findByLatLon"},{"_content":"flickr.places.getChildrenWithPhotosPublic"},{"_content":"flickr.places.getInfo"},{"_content":"flickr.places.getInfoByUrl"},{"_content":"flickr.places.getPlaceTypes"},{"_content":"flickr.places.getShapeHistory"},{"_content":"flickr.places.getTopPlacesList"},{"_content":"flickr.places.placesForBoundingBox"},{"_content":"flickr.places.placesForContacts"},{"_content":"flickr.places.placesForTags"},{"_content":"flickr.places.placesForUser"},{"_content":"flickr.places.resolvePlaceId"},{"_content":"flickr.places.resolvePlaceURL"},{"_content":"flickr.places.tagsForPlace"},{"_content":"flickr.prefs.getContentType"},{"_content":"flickr.prefs.getGeoPerms"},{"_content":"flickr.prefs.getHidden"},{"_content":"flickr.prefs.getPrivacy"},{"_content":"flickr.prefs.getSafetyLevel"},{"_content":"flickr.push.getSubscriptions"},{"_content":"flickr.push.getTopics"},{"_content":"flickr.push.subscribe"},{"_content":"flickr.push.unsubscribe"},{"_content":"flickr.reflection.getMethodInfo"},{"_content":"flickr.reflection.getMethods"},{"_content":"flickr.stats.getCollectionDomains"},{"_content":"flickr.stats.getCollectionReferrers"},{"_content":"flickr.stats.getCollectionStats"},{"_content":"flickr.stats.getCSVFiles"},{"_content":"flickr.stats.getPhotoDomains"},{"_content":"flickr.stats.getPhotoReferrers"},{"_content":"flickr.stats.getPhotosetDomains"},{"_content":"flickr.stats.getPhotosetReferrers"},{"_content":"flickr.stats.getPhotosetStats"},{"_content":"flickr.stats.getPhotoStats"},{"_content":"flickr.stats.getPhotostreamDomains"},{"_content":"flickr.stats.getPhotostreamReferrers"},{"_content":"flickr.stats.getPhotostreamStats"},{"_content":"flickr.stats.getPopularPhotos"},{"_content":"flickr.stats.getTotalViews"},{"_content":"flickr.tags.getClusterPhotos"},{"_content":"flickr.tags.getClusters"},{"_content":"flickr.tags.getHotList"},{"_content":"flickr.tags.getListPhoto"},{"_content":"flickr.tags.getListUser"},{"_content":"flickr.tags.getListUserPopular"},{"_content":"flickr.tags.getListUserRaw"},{"_content":"flickr.tags.getMostFrequentlyUsed"},{"_content":"flickr.tags.getRelated"},{"_content":"flickr.test.echo"},{"_content":"flickr.test.login"},{"_content":"flickr.test.null"},{"_content":"flickr.urls.getGroup"},{"_content":"flickr.urls.getUserPhotos"},{"_content":"flickr.urls.getUserProfile"},{"_content":"flickr.urls.lookupGallery"},{"_content":"flickr.urls.lookupGroup"},{"_content":"flickr.urls.lookupUser"}]},"stat":"ok"}'
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 05:59:33 GMT
+- request:
+    method: post
+    uri: https://api.flickr.com/services/rest/
+    body:
+      encoding: US-ASCII
+      string: tags=car&per_page=10&method=flickr.photos.search&format=json&nojsoncallback=1
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - FlickRaw/0.9.9
+      Authorization:
+      - OAuth realm="https://api.flickr.com/services/rest/", oauth_consumer_key="dad0eb26ae1afd1f034759702345c775",
+        oauth_nonce="%2FJ6bZri%2FltSATDq5hRv7N7JxxPM5DjDITA5dYHUuUWg%3D", oauth_signature="50e79f0c57825cc4%26",
+        oauth_signature_method="PLAINTEXT", oauth_timestamp="1471499973", oauth_token="",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 18 Aug 2016 05:59:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '539'
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www288.flickr.bf1.yahoo.com
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding
+      Age:
+      - '0'
+      Via:
+      - http/1.1 fts130.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        r16.ycpi.ams.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+      Y-Trace:
+      - BAEAQAAAAAAhdZ_uCyHROAAAAAAAAAAA7rjWL4OJzT0AAAAAAAAAAAAFOlJJMf2HAAU6Ukk1cYsnITx3AAAAAA--
+    body:
+      encoding: ASCII-8BIT
+      string: '{"photos":{"page":1,"pages":51752,"perpage":10,"total":"517513","photo":[{"id":"28439083854","owner":"66887658@N05","secret":"49cd1a4ab6","server":"8843","farm":9,"title":"Chevrolet
+        Blazer","ispublic":1,"isfriend":0,"isfamily":0},{"id":"29060219335","owner":"62603665@N00","secret":"12cb1b902b","server":"8720","farm":9,"title":"Golden","ispublic":1,"isfriend":0,"isfamily":0},{"id":"28438985974","owner":"22653006@N05","secret":"ffc8429b88","server":"8459","farm":9,"title":"I
+        Tramo de Tierra Villa de Quel","ispublic":1,"isfriend":0,"isfamily":0},{"id":"29060042715","owner":"22653006@N05","secret":"f612f34455","server":"7501","farm":8,"title":"I
+        Tramo de Tierra Villa de Quel","ispublic":1,"isfriend":0,"isfamily":0},{"id":"28438975434","owner":"22653006@N05","secret":"cb17fc5620","server":"8251","farm":9,"title":"I
+        Tramo de Tierra Villa de Quel","ispublic":1,"isfriend":0,"isfamily":0},{"id":"29027040756","owner":"22653006@N05","secret":"9c6f8b815c","server":"8128","farm":9,"title":"I
+        Tramo de Tierra Villa de Quel","ispublic":1,"isfriend":0,"isfamily":0},{"id":"28983692601","owner":"8962043@N04","secret":"506bb03988","server":"8549","farm":9,"title":"Window
+        Onto Wetness","ispublic":1,"isfriend":0,"isfamily":0},{"id":"28773478880","owner":"100443648@N05","secret":"c0393386ed","server":"8240","farm":9,"title":"1958
+        \"Knobbly\" Lister","ispublic":1,"isfriend":0,"isfamily":0},{"id":"28438813904","owner":"123497562@N08","secret":"fb861abc7f","server":"7545","farm":8,"title":"M1","ispublic":1,"isfriend":0,"isfamily":0},{"id":"28773463210","owner":"31869363@N03","secret":"63d9db830f","server":"8014","farm":9,"title":"_DS88052.jpg","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"}'
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 05:59:33 GMT
+recorded_with: VCR 3.0.3
