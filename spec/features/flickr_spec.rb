@@ -45,7 +45,7 @@ RSpec.describe 'Flickr', type: :feature do
         VCR.insert_cassette("flickr/info") do
           allow(FlickRaw).to receive(:url).with(info)
           result = Flickr.url(info)
-          expect(result).to match(/^https:\/\/farm\d\.staticflickr\.com\/.+\.jpg$/)
+          expect(result).to match(%r{^https:\/\/farm\d\.staticflickr\.com\/.+\.jpg$})
         end
       end
     end

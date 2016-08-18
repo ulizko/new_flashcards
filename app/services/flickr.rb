@@ -8,15 +8,15 @@ class Flickr
       info = ids.map { |id| info(id) }
       info.map { |i| url(i) }
     end
-    
+
     def search(query)
       flickr.photos.search(tags: query, per_page: 10)
     end
-    
+
     def info(id)
       flickr.photos.getInfo(photo_id: id)
     end
-    
+
     def url(info)
       FlickRaw.url(info)
     end
