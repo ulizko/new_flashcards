@@ -4,9 +4,7 @@ class Flickr
 
   class << self
     def photos(query)
-      ids = search(query).map(&:id)
-      info = ids.map { |id| info(id) }
-      info.map { |i| url(i) }
+      search(query).map { |el| url(info(el.id)) }
     end
 
     def search(query)

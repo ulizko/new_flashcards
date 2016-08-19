@@ -1,5 +1,5 @@
 require 'rails_helper'
-require_relative '../../app/services/flickr.rb'
+require "#{Rails.root}/app/services/flickr"
 
 RSpec.describe 'Flickr', type: :feature do
   describe "class methods" do
