@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   end
 
   scope module: 'dashboard' do
+    get '/search' => 'search#new'
     resources :user_sessions, only: :destroy
     resources :users, only: [:destroy, :index]
     delete 'logout' => 'user_sessions#destroy', :as => :logout

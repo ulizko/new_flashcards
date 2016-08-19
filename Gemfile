@@ -35,6 +35,8 @@ gem 'rails_admin', '>= 1.0.0.rc'
 gem 'rolify'
 gem 'pundit'
 gem 'rails-i18n', '~> 5.0.0'
+gem 'flickraw'
+gem 'coveralls', require: false
 
 group :development do
   gem 'pry-rails'
@@ -46,4 +48,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'webmock'
+  gem 'vcr'
 end
