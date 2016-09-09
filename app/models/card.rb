@@ -2,12 +2,11 @@ class Card < ApplicationRecord
   belongs_to :user
   belongs_to :block
 
-  before_validation :set_review_date_as_now, on: [:create]
+  before_create :set_review_date_as_now
+  before_create :set_block, if: :block_blank?
   validate :texts_are_not_equal
-  validates :original_text, :translated_text, :review_date,
+  validates :original_text, :translated_text,
             presence: { message: 'Необходимо заполнить поле.' }
-  validates :block_id,
-            presence: { message: 'Выберите колоду из выпадающего списка.' }
 
   mount_uploader :image, CardImageUploader
 
@@ -45,10 +44,18 @@ class Card < ApplicationRecord
     self.review_date = Time.now
   end
 
+  def set_block
+    self.block = self.user.blocks.default
+  end
+
   def texts_are_not_equal
     if full_downcase(original_text) == full_downcase(translated_text)
       errors.add(:original_text, 'Вводимые значения должны отличаться.')
     end
+  end
+  
+  def block_blank?
+    self.block_id.blank?
   end
 
   def full_downcase(str)
