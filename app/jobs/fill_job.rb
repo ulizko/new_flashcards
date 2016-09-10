@@ -1,10 +1,10 @@
 class FillJob < ApplicationJob
   queue_as :default
 
-  def perform(options, user)
+  def perform(user, options)
     data = Fill.start(options)
     data.each do |d|
-      Card.create(v, user: user)
+      Card.create(d.merge(user: user))
     end
   end
 end

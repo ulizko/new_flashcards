@@ -32,10 +32,14 @@ ru:
       add_block: 'Добавить колоду'
       all_cards: 'Все карточки'
       add_card: 'Добавить карточку'
+      add_cards_from_url: 'Добавить карточки через url '
       delete_user: 'Удалиться'
       user_profile: 'Профиль'
       log_out: 'Выход'
   dashboard:
+    fill:
+      scrap:
+        job_started: 'Задача запущена. Для просмотра обновите страницу.'
     trainer:
       review_form:
         no_review_card: 'Вы изучили все доступные карточки'
@@ -55,6 +59,7 @@ ru:
         review: 'Пересмотр'
         edit: 'Редактировать'
         remove: 'Удалить'
+        remove_records: 'Вы действительно хотите удалить карточку'
       new:
         add_card: 'Добавить карточку'
       form:

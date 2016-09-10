@@ -19,6 +19,9 @@ Rails.application.routes.draw do
     get '/search' => 'search#new'
     resources :user_sessions, only: :destroy
     resources :users, only: [:destroy, :index]
+    post 'scrap' => 'fill#scrap'
+    get 'add' => 'fill#add'
+    get 'recent' => 'fill#index'
     delete 'logout' => 'user_sessions#destroy', :as => :logout
 
     resources :cards

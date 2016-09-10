@@ -7,8 +7,4 @@ class Fill
   end
 end
 
-# Fill.start(url: 'http://sanstv.ru/english_words',
-#           original_text_selector: '//table[@id="table"]/tbody/tr/td[4]/a[2]',
-#           translated_text_selector: '//table[@id="table"]/tbody/tr/td[6]')
-
-# url: 'http://sanstv.ru/english_words', original_text_selector: '//table[@id="table"]/tbody/tr/td[4]/a[2]', translated_text_selector: '//table[@id="table"]/tbody/tr/td[6]'
+# e.g.: {url: 'http://sanstv.ru/english_words', original_text_selector: '//table[@id="table"]/tbody/tr/td[4]/a[2]', translated_text_selector: '//table[@id="table"]/tbody/tr/td[6]'}

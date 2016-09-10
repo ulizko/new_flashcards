@@ -12,6 +12,7 @@ class Card < ApplicationRecord
 
   scope :pending, -> { where('review_date <= ?', Time.now).order('RANDOM()') }
   scope :repeating, -> { where('quality < ?', 4).order('RANDOM()') }
+  scope :recent, -> { where('created_at > ?', Date.today) }
 
   def check_translation(user_translation)
     distance = Levenshtein.distance(full_downcase(translated_text),
@@ -53,7 +54,7 @@ class Card < ApplicationRecord
       errors.add(:original_text, 'Вводимые значения должны отличаться.')
     end
   end
-  
+
   def block_blank?
     self.block_id.blank?
   end
