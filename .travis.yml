@@ -9,7 +9,7 @@ services:
 script:
   - RAILS_ENV=test bundle exec rails db:migrate --trace
   - bundle exec rails db:test:prepare
-  - bundle exec rails
+  - bundle exec rails spec
 before_script:
   - cp config/database.travis.yml config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
