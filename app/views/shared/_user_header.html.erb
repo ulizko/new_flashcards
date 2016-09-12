@@ -16,6 +16,6 @@
     <%= link_to t('.delete_user'), user_path(current_user),
                 method: :delete, class: 'navbar-link',
                 data: { confirm: 'Удалить пользователя?' } %> |
-    <%= link_to t('.log_out'), :logout, method: :delete,
+    <%= link_to t('.log_out'), logout_path, method: :delete,
                 class: 'navbar-link' %>
 </p>
