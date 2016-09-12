@@ -30,15 +30,6 @@ class Card < ApplicationRecord
     { state: state, distance: distance }
   end
 
-  def self.pending_cards_notification
-    users = User.where.not(email: nil)
-    users.each do |user|
-      if user.cards.pending
-        CardsMailer.pending_cards_notification(user.email).deliver_now
-      end
-    end
-  end
-
   protected
 
   def set_review_date_as_now

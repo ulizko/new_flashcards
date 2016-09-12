@@ -36,6 +36,15 @@ class User < ApplicationRecord
     update_attribute(:current_block_id, nil)
   end
 
+  def self.pending_cards_notification
+    users = where.not(email: nil)
+    users.each do |user|
+      if user.cards.pending
+        MailerJob.perform_later(user.email)
+      end
+    end
+  end
+
   private
 
   def set_default_locale
