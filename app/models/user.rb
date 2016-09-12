@@ -37,11 +37,9 @@ class User < ApplicationRecord
   end
 
   def self.pending_cards_notification
-    users = where.not(email: nil)
+    users = select(:email).group('users.email').joins(:cards).where('cards.review_date <= ?', Time.now)
     users.each do |user|
-      if user.cards.pending
-        MailerJob.perform_later(user.email)
-      end
+      MailerJob.perform_later(user.email)
     end
   end
 
