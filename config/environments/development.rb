@@ -45,5 +45,5 @@ Rails.application.configure do
     password: ENV['SMTP_SETTINGS_PASSWORD']
   }
 
-  config.action_mailer.default_url_options = { host: ENV['IP'] }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 end
