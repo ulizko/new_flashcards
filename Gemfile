@@ -36,7 +36,7 @@ gem 'rolify'
 gem 'pundit'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'flickraw'
-gem 'coveralls', require: false
+gem 'sidekiq'
 
 group :development do
   gem 'pry-rails'

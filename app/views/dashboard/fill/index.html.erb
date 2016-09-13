@@ -13,9 +13,11 @@
       <td><%= card.original_text %></td>
       <td><%= card.translated_text %></td>
       <td><%= card.review_date.strftime('%d.%m.%Y %H:%M:%S') %></td>
-      <td><%= link_to t('.edit'), edit_card_path(card) %></td>
-      <td><%= link_to t('.remove'), card, method: :delete,
-                      data: { confirm: "#{t('.remove_records')}?" } %></td>
+      <% if policy(card).owner? %>
+        <td><%= link_to t('.edit'), edit_card_path(card) %></td>
+        <td><%= link_to t('.remove'), card, method: :delete,
+                        data: { confirm: "#{t('.remove_records')}?" } %></td>
+      <% end %> 
     </tr>
   <% end %>
   </tbody>

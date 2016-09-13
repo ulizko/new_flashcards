@@ -1,0 +1,6 @@
+<%= simple_form_for :fill, url: scrap_path do |f| %>
+  <%= f.input :url %>
+  <%= f.input :original_text_selector %>
+  <%= f.input :translated_text_selector %>
+  <%= f.button :submit %>
+<% end %>

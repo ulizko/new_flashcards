@@ -1,4 +1,5 @@
 AllCops:
+  TargetRubyVersion: 2.3
   Include:
   - "**/*.rake"
   - "**/Gemfile"
@@ -48,3 +49,14 @@ Style/AlignHash:
   - ignore_explicit
 DotPosition:
   EnforcedStyle: trailing
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/SpaceInsideHashLiteralBraces:
+  Description: "Use spaces inside hash literal braces - or don't."
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#spaces-operators'
+  Enabled: false
+
+Style/SpaceInsideBrackets:
+  Enabled: false
