@@ -24,5 +24,6 @@ module Flashcards
     config.i18n.default_locale = :ru
     config.i18n.available_locales = [:ru, :en]
     config.active_job.queue_adapter = :sidekiq
+    config.cache_store = :redis_store, "redis://#{ENV['IP']}:6379/0/cache", { expires_in: 6.hours }
   end
 end
