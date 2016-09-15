@@ -37,7 +37,7 @@ class Card < ApplicationRecord
   end
 
   def set_block
-    self.block = self.user.blocks.default
+    self.block = user.blocks.default
   end
 
   def texts_are_not_equal
@@ -47,7 +47,7 @@ class Card < ApplicationRecord
   end
 
   def block_blank?
-    self.block_id.blank?
+    block_id.blank?
   end
 
   def full_downcase(str)

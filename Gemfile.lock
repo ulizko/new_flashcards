@@ -228,6 +228,22 @@ GEM
     rdoc (4.2.2)
       json (~> 1.4)
     redis (3.3.1)
+    redis-actionpack (5.0.0)
+      actionpack (>= 4.0.0, < 6)
+      redis-rack (~> 2.0.0.pre)
+      redis-store (~> 1.2.0.pre)
+    redis-activesupport (5.0.1)
+      activesupport (>= 3, < 6)
+      redis-store (~> 1.2.0)
+    redis-rack (2.0.0.pre)
+      rack (> 1.5, < 3)
+      redis-store (~> 1.2.0.pre)
+    redis-rails (5.0.1)
+      redis-actionpack (~> 5.0.0)
+      redis-activesupport (~> 5.0.0)
+      redis-store (~> 1.2.0)
+    redis-store (1.2.0)
+      redis (>= 2.2)
     rolify (5.1.0)
     rollbar (2.12.0)
       multi_json
@@ -339,6 +355,7 @@ DEPENDENCIES
   rails_12factor
   rails_admin (>= 1.0.0.rc)
   rake
+  redis-rails
   remotipart!
   rolify
   rollbar

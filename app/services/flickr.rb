@@ -4,7 +4,9 @@ class Flickr
 
   class << self
     def photos(query)
-      search(query).map { |el| url(info(el.id)) }
+      Rails.cache.fetch query do
+        search(query).map { |el| url(info(el.id)) }
+      end
     end
 
     def search(query)
