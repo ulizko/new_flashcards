@@ -2,6 +2,8 @@ language: ruby
 cache: bundler
 rvm:
   - 2.3.0
+addons:
+  postgresql: "9.3"
 env:
   - DB=postgresql
 services:
