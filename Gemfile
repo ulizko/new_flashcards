@@ -38,6 +38,7 @@ gem 'rails-i18n', '~> 5.0.0'
 gem 'flickraw'
 gem 'sidekiq'
 gem 'redis-rails'
+gem 'ahoy_matey'
 
 group :development do
   gem 'pry-rails'
