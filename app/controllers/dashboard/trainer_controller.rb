@@ -27,6 +27,7 @@ module Dashboard
       else
         flash[:alert] = t(:incorrect_translation_alert)
       end
+      ahoy.track 'User reviewed card', state: check_result[:state]
       redirect_to trainer_path
     end
 
