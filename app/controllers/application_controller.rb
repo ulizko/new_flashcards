@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
   before_action :require_login
+  after_action :track_action
 
   private
 
@@ -45,5 +46,9 @@ class ApplicationController < ActionController::Base
   def not_found
     flash[:alert] = 'Вы обратились к несуществующей записи.'
     redirect_to root_path
+  end
+
+  def track_action
+    ahoy.track "Processed #{controller_name}##{action_name}", request.filtered_parameters
   end
 end
