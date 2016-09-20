@@ -48,7 +48,7 @@ RSpec.describe 'roles', type: :feature do
     context 'type \admin' do
       it 'get message "permission denied"' do
         visit rails_admin_path
-        expect(page).to have_content 'You are not authorized to perform this action'
+        expect(page).to have_content I18n.t('defaults.not_authorized')
       end
     end
   end

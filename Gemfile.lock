@@ -75,6 +75,7 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    chartkick (2.1.1)
     chronic (0.10.2)
     coderay (1.1.1)
     coffee-rails (4.2.1)
@@ -124,6 +125,8 @@ GEM
     geocoder (1.4.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    groupdate (3.0.2)
+      activesupport (>= 3)
     haml (4.0.7)
       tilt
     hashdiff (0.3.0)
@@ -356,12 +359,14 @@ DEPENDENCIES
   byebug
   capybara
   carrierwave
+  chartkick
   coffee-rails
   factory_girl_rails
   faraday
   figaro
   flickraw
   fog-aws
+  groupdate
   http_accept_language
   jbuilder (~> 2.0)
   jquery-rails
