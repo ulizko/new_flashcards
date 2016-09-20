@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
   end
 
   def permission_denied
-    flash[:alert] = "You are not authorized to perform this action."
+    flash[:alert] = t('defaults.not_authorized')
     redirect_to(request.referrer || main_app.root_path)
   end
 

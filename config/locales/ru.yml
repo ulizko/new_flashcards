@@ -11,6 +11,8 @@ ru:
   log_out_failed_provider_alert: "Вход из аккаунта %{provider.titleize} не выполнен ."
   please_log_in: 'Пожалуйста авторизуйтесь.'
   user_created_successfully_notice: 'Пользователь успешно создан.'
+  defaults:
+    not_authorized: "Вы не авторизованы для выполнения этого действия"
   main:
     index:
       welcome: 'Добро пожаловать.'

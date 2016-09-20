@@ -19,7 +19,7 @@ module Dashboard
       end
 
       context 'when did typo, but translation is correct' do
-        let(:typo) do 
+        let(:typo) do
           I18n.t('translation_from_misprint_alert', user_translation: 'houce',
                  original_text: card.original_text, translated_text: card.translated_text)
         end
