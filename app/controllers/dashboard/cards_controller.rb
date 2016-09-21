@@ -20,7 +20,7 @@ module Dashboard
       else
         render 'new'
       end
-      ahoy.track 'User added card'
+      ahoy.track 'User added card', group: :card, status: :created, card_id: @card.id
     end
 
     def update
@@ -33,7 +33,7 @@ module Dashboard
 
     def destroy
       @card.destroy
-      ahoy.track 'User deleted card'
+      ahoy.track 'User deleted card', group: :card, status: :deleted, card_id: @card.id
       redirect_to cards_path
     end
 

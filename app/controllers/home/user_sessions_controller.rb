@@ -13,7 +13,7 @@ module Home
 
     def create
       if @user = login(params[:email], params[:password])
-        ahoy.track 'User is logged'
+        ahoy.track 'User is logged', group: :user, status: :logged
         redirect_back_or_to root_path, notice: t(:log_in_is_successful_notice)
       else
         flash.now[:alert] = t(:not_logged_in_alert)

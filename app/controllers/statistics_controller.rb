@@ -8,7 +8,7 @@ class StatisticsController < ApplicationController
 
   def loads_images_from_flickr
     images = Ahoy::Event.where("name LIKE ?", "%Flickr%").
-      group_by_day(:time, format: "%d %b", range: 1.months.ago..Time.now).count
+              group_by_day(:time, format: "%d %b", range: 1.months.ago..Time.now).count
     render json: images
   end
 
@@ -19,7 +19,7 @@ class StatisticsController < ApplicationController
 
   def results_review_cards
     results = Ahoy::Event.where(name: 'User reviewed card').group("properties::json->>'state'").
-      group_by_day(:time, format: "%d %b", range: 1.months.ago..Time.now).count
+                group_by_day(:time, format: "%d %b", range: 1.months.ago..Time.now).count
     render json: results.chart_json
   end
 

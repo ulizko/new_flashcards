@@ -3,6 +3,8 @@ class User < ApplicationRecord
   has_many :cards, dependent: :destroy
   has_many :blocks, dependent: :destroy
   has_many :authentications, dependent: :destroy
+  has_many :visits, dependent: :destroy
+  has_many :ahoy_events, class_name: "Ahoy::Event", dependent: :destroy
   belongs_to :current_block, class_name: 'Block'
 
   before_create :set_default_locale
