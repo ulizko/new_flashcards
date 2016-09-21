@@ -3,7 +3,7 @@ module Dashboard
     def new
       query = params[:search][:query].tr(" ", ",")
       @photos = Flickr.photos(query)
-      ahoy.track 'User loaded photo from Flickr', search_query: query
+      ahoy.track 'User loaded photo from Flickr', group: :image, status: :loaded, search_query: query
       respond_to do |format|
         format.html
         format.js

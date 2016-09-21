@@ -19,15 +19,18 @@ module Dashboard
       check_result = @card.check_translation(user_translation)
       if check_result[:state] && check_result[:distance].zero?
         flash[:notice] = t(:correct_translation_notice)
+        status = :review_complited
       elsif check_result[:state]
         flash[:alert] = t 'translation_from_misprint_alert',
                           user_translation: user_translation,
                           original_text: @card.original_text,
                           translated_text: @card.translated_text
+        status = :review_complited
       else
         flash[:alert] = t(:incorrect_translation_alert)
+        status = :review_failed
       end
-      ahoy.track 'User reviewed card', state: check_result[:state]
+      ahoy.track 'User reviewed card', group: :card, status: status, card_id: @card.id
       redirect_to trainer_path
     end
 

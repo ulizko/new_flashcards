@@ -14,7 +14,7 @@ module Home
     def create
       @user = User.new(user_params)
       if @user.save
-        ahoy.track 'User registered', email: user_params[:email]
+        ahoy.track 'User registered', group: :user, status: :registered, email: user_params[:email]
         redirect_to root_path, notice: t(:user_created_successfully_notice)
       else
         render 'new'

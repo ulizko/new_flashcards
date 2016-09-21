@@ -13,11 +13,13 @@ module Home
       if @user = login_from(provider)
         redirect_to trainer_path, notice: (t 'log_in_is_successful_provider_notice',
                                              provider: provider.titleize)
-        ahoy.track 'User is logged with provider', provider: auth_params[:provider]
+        ahoy.track 'User is logged with provider', group: :user,
+                   status: :social_logged, provider: auth_params[:provider]
       else
         begin
           @user = create_from(provider)
-          ahoy.track 'User registered with provider', provider: provider
+          ahoy.track 'User registered with provider', group: :user,
+                     status: :social_registered, provider: auth_params[:provider]
           reset_session
           auto_login(@user)
           redirect_to trainer_path, notice: (t 'log_in_is_successful_provider_notice',

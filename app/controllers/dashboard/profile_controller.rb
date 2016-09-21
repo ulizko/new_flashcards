@@ -10,6 +10,7 @@ module Dashboard
       else
         respond_with current_user
       end
+      ahoy.track "Profile updated", group: :user, status: :updated
     end
 
     private
