@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'statistics/index'
   resources :statistics, only: [] do
     collection do
-      get 'visits_use_social'
+      get 'visits_per_day'
       get 'loads_images_from_flickr'
       get 'results_review_cards'
       get 'visits_from_countries'
